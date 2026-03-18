@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}Tasks{% endblock %}
+
+{% block content %}
+<div class="Task-Box">
+    <div class="container shadow-lg my-3 py-3 rounded-3">
+        <h2 class="text-center fw-bold pt-3">Your Tasks</h2>
+        {% if tasks %}
+        <form method="POST" action="{{ url_for('tasks.clear_task', task_id='0') }}">
+            <button type="submit" class="btn btn-danger fw-bold">Clear All Tasks</button>
+        </form>
+        <br>
+        <table class="table shadow-lg table-bordered border-primary align-middle table-striped">
+            <thead class="p-3">
+                <tr>
+                    <th>#</th>
+                    <th>Task</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="p-3">
+                {% for task in tasks %}
+                <tr>
+                    <td>{{task.id}}</td>
+                    <td>{{task.title}}</td>
+                    <td class="text-wrap">{{ task.description }}</td>
+                    <td><span class="badge p-2 {{task.status|lower}}">{{task.status}}</span></td>
+                    <td>
+                        <a href="{{ url_for('tasks.edit', task_id=task.id) }}" class="btn btn-primary">Edit</a>
+                        <br>
+                        <br>
+                        <form method="POST" action="{{ url_for('tasks.clear_task', task_id=task.id) }}">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <form action="{{ url_for('tasks.add_task') }}" method="post" class="form-control shadow-lg">
+        <h2 class="text-center fw-bold">Task Form</h2>
+        <label for="title" class="form-label fw-bold">Title</label>
+        <input type="text" name="title" class="form-control" placeholder="Task Title" id="title" required><br>
+        <label for="description" class="form-label fw-bold">Description</label>
+        <textarea name="description" id="description" class="form-control"
+            placeholder="Enter Description(upto 200words.)" required></textarea>
+        <button type="submit" class="btn btn-primary mt-3">Add Task</button>
+    </form>
+
+    {% else %}
+    <p>No tasks yet. Add a task to get started!</p>
+    {% endif %}
+</div>
+{% endblock %}

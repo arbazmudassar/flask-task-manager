@@ -1,0 +1,102 @@
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+header{
+    background-color: #0e77e0;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1{
+    margin: 0;
+    font-size: 28px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+nav{
+    margin-top: 10px;
+    text-align: center;
+}
+
+footer{
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    margin-top: 60px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p{
+    margin: 0;
+}
+
+.flash.success{
+    background-color: #d4edda;
+    color: #4d824a;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb;
+}
+.flash.danger{
+    background-color: #f8d7da;
+    margin-top: 5px;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #f5c6cb;
+}
+.flash.info{
+    background-color: #d1ecf1;
+    color: #0c5460;
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #bee5eb;
+}
+
+.login-box{
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 40px auto;
+}
+
+.task-box{
+    max-width: 700px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.badge{
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+}
+
+.badge.pending{
+    background-color: #ffc107;
+}
+
+.badge.done{
+    background-color: #28a745;
+}
+
+.badge.working{
+    background-color: #17a2b8;
+}

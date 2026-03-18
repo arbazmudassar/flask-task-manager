@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %} Edit Task {% endblock %}
+
+{% block content %}
+<div class="Task-Box my-3 p-3">
+    <table class="table table-bordered shadow-lg">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{task.id}}</td>
+                <td>{{task.title}}</td>
+                <td class="text-wrap">{{ task.description }}</td>
+                <td><span class="badge p-2 {{task.status|lower}}">{{task.status}}</span></td>
+                <td>
+                    <form method="POST" action="{{ url_for('tasks.toggle_status', task_id=task.id) }}">
+                        <button type="submit" class="btn btn-primary">Update Status</button>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <form action="{{ url_for('tasks.edit',task_id=task.id) }}" method="post" class="form-control shadow-lg mt-3">
+        <label for="title" class="form-label"></label>
+        <input type="text" name="title" value="{{ task.title }}" class="form-control" required>
+        <label for="description" class="form-label">Description</label>
+        <textarea name="description" id="description" class="form-control" value="{{ task.description }}" required></textarea>
+        <button type="submit" class="btn btn-primary mt-3">Update Task</button>
+    </form>
+</div>
+{% endblock %}
