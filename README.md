@@ -1,150 +1,88 @@
-# 📝 Flask Task Manager
+# 📝 Flask Todo App
 
-A simple and efficient task management web application built using Flask. This project allows users to organize their daily tasks with a clean interface and secure user-based access.
-
----
-
-## 📌 Overview
-
-This application is designed to help users manage their tasks in a structured way. Each user can create, update, and track their own tasks without interference from other users.
-
-The project focuses on implementing backend logic, database handling, and user session management in a practical, real-world scenario.
+A simple and functional Todo Web Application built using Flask. This project allows users to manage their daily tasks efficiently with features like task creation, updating, and deletion.
 
 ---
 
 ## 🚀 Features
 
-* 🔐 User Authentication (Login / Signup)
-* 🧾 Create, Update, and Delete Tasks
-* 📊 Task Status Management (Pending / Working /Completed)
-* 👤 User-specific Task Access (each user sees only their tasks)
-* ⚡ Flash messages for user feedback
-* 🎨 Clean and responsive UI using Bootstrap
+* User authentication (Login / Register)
+* Add, update, and delete tasks
+* Task status management
+* Clean and simple UI
+* Backend powered by Flask
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Backend:** Python (Flask)
-* **Database:** SQLite (SQLAlchemy ORM)
-* **Frontend:** HTML, CSS, Bootstrap
-* **Version Control:** Git & GitHub
-
----
-
-## 📂 Project Structure
-
-```
-flask-task-manager/
-│
-├── app/
-│   ├── __init__.py
-│   ├── models.py
-│   ├── routes/
-│   ├── templates/
-│   └── static/
-│
-├── venv/
-├── requirements.txt
-├── config.py
-└── run.py
-```
-
----
-
-## ⚙️ Installation & Setup
-
-Follow these steps to run the project locally:
-
-### 1️⃣ Clone the repository
-
-```
-git clone https://github.com/your-username/flask-task-manager.git
-cd flask-task-manager
-```
-
-### 2️⃣ Create virtual environment
-
-```
-python -m venv venv
-```
-
-### 3️⃣ Activate virtual environment
-
-**Windows:**
-
-```
-venv\Scripts\activate
-```
-
-**Mac/Linux:**
-
-```
-source venv/bin/activate
-```
-
-### 4️⃣ Install dependencies
-
-```
-pip install -r requirements.txt
-```
-
-### 5️⃣ Run the application
-
-```
-python run.py
-```
-
-### 6️⃣ Open in browser
-
-```
-http://127.0.0.1:5000/
-```
-
----
-
-## 🧠 Key Learning Outcomes
-
-* Understanding Flask application structure
-* Working with databases using SQLAlchemy
-* Implementing user authentication and sessions
-* Handling CRUD operations in real-world applications
-* Debugging and fixing multi-user data issues
+* Python
+* Flask
+* SQLite
+* HTML, CSS, Bootstrap
 
 ---
 
 ## 📸 Screenshots
 
-<img width="1358" height="794" alt="image" src="https://github.com/user-attachments/assets/5275245c-ffc2-4cf7-80f1-f4e34d010ad9" />
-<img width="1153" height="799" alt="image" src="https://github.com/user-attachments/assets/0af3ac71-b1e7-475d-a9cb-e576dbedcc43" />
-<img width="1745" height="747" alt="image" src="https://github.com/user-attachments/assets/d89d3468-0555-452a-a818-e4dc8ca9c52b" />
-<img width="1775" height="846" alt="image" src="https://github.com/user-attachments/assets/d88c8835-a08e-4114-abfd-2800effce1ff" />
-<img width="1701" height="755" alt="image" src="https://github.com/user-attachments/assets/f85f3af0-20d9-4bbd-b9dd-b5a14b8201ba" />
+<img width="1745" height="747" alt="Screenshot 2026-03-18 222402" src="https://github.com/user-attachments/assets/59b7ce48-590a-4367-9ed3-85495d2b3f78" />
+<img width="1153" height="799" alt="Screenshot 2026-03-18 222028" src="https://github.com/user-attachments/assets/52a36f12-ca4e-4ca2-b967-467d3be64a5b" />
+<img width="1358" height="794" alt="Screenshot 2026-03-18 221954" src="https://github.com/user-attachments/assets/7908d9a1-becf-4875-9af6-f5a7baa7856c" />
+<img width="1701" height="755" alt="Screenshot 2026-03-18 222607" src="https://github.com/user-attachments/assets/faf2a969-b30e-4e80-a3de-e0d93b190f67" />
+<img width="1775" height="846" alt="Screenshot 2026-03-18 222428" src="https://github.com/user-attachments/assets/30dc6eb3-4e41-445a-bc1d-62fe570f1991" />
+
 
 ---
 
-## 🔮 Future Improvements
+## ⚙️ Installation & Setup
 
-* Add search and filtering functionality
-* Implement task categories
-* Add Due Dates to Tasks
-* Add REST API support
-* Deploy the application online (Render / Railway)
-* Improve UI/UX design
+1. Clone the repository:
+
+```
+git clone https://github.com/arbazmudassar/flask-todo-app.git
+```
+
+2. Navigate to project folder:
+
+```
+cd flask-todo-app
+```
+
+3. Create virtual environment:
+
+```
+python -m venv venv
+```
+
+4. Activate environment:
+
+```
+venv\Scripts\activate
+```
+
+5. Install dependencies:
+
+```
+pip install -r requirements.txt
+```
+
+6. Run the app:
+
+```
+python app.py
+```
 
 ---
 
-## 🤝 Contributing
+## 📌 Future Improvements
 
-Contributions are welcome. Feel free to fork the repository and submit a pull request.
-
----
-
-## 📬 Contact
-
-* GitHub: https://github.com/arbazmudassar
-* Email: [arbazmudassar@gmail.com](mailto:arbazmudassar0@gmail.com)
+* Add due dates for tasks
+* Improve UI/UX
+* Deploy online
 
 ---
 
-⭐ If you found this project helpful, consider giving it a star!
+## 👨‍💻 Author
+
+Arbaz Mudassar
+GitHub: https://github.com/arbazmudassar
